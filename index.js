@@ -94,7 +94,8 @@ function renderStudent(student) {
 	const h5 = createElement('h5', { text: `Name: ${student.name}`, class: 'card-title' });
 	const p = createElement('p', { class: 'card-text', text: `Hi, my name is ${student.name}, I'm a ${student.species} and I'm ${student.age} years old!` });
 	const btn = createElement('button', { class: 'btn btn-primary', onclick: () => editStudent(student), text: 'Edit me' });
-	const body = createElement('div', { class: 'card-body', children: [h5, p, btn] })
+	const btn2 = createElement('button', { class: 'btn btn-danger ml-3', onclick: () => deleteStudent(student), text: 'Delete me' });
+	const body = createElement('div', { class: 'card-body', children: [h5, p, btn, btn2] })
 	const img = createElement('img', { src: student.avatar, class: 'card-img-top' });
 	const element = createElement('div', { class: 'card', style: "width: 15rem;", children: [img, body] });
 	return element;
