@@ -112,3 +112,15 @@ function getStudents() {
 		.then(students => renderStudents(students))
 		.catch(e => showErrorToast(e));
 }
+
+function doCreateStudent(e) {
+	console.log("Complete your code");
+}
+
+function deleteStudent(s) {
+	console.log("Complete your code");
+}
+
+function doEditStudent(e, s) {
+	console.log("Complete your code");
+}
