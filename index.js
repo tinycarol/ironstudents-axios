@@ -24,14 +24,16 @@ function clearContainer() {
 	container.style = '';
 }
 
-function createElement(tag, className, style, onClick, children, text, src) {
+function createElement(tag, other) {
 	const element = document.createElement(tag);
-	element.className = className;
-	element.style = style;
-	if (onClick) element.onclick = onClick;
-	if (children) children.forEach(child => element.appendChild(child));
-	if (text) element.appendChild(document.createTextNode(text));
-	if (src) element.src = src;
+	other && Object.keys(other).forEach(key => {
+		switch (key) {
+			case 'text': element.appendChild(document.createTextNode(other[key])); break;
+			case 'children': other[key].forEach(child => element.appendChild(child)); break;
+			case 'onclick': element.onclick = other[key]; break;
+			default: element.setAttribute(key, other[key]);
+		}
+	});
 	return element;
 }
 
@@ -43,19 +45,29 @@ function showErrorToast(e) {
 	wrapper.appendChild(toast);
 }
 
+function renderForm(s) {
+	const nameLabel = createElement('label', { for: 'name', class: 'form-control' });
+	const name = createElement('input', { type: 'text', value: s.name, name: 'name', class: 'form-control' });
+	const nameGroup = createElement('div', { children: [nameLabel, name], class: 'form-group' });
+	const form = createElement('form', { children: [nameGroup], class: 'form-control' });
+	return form;
+}
+
 function editStudent(s) {
 	console.log(s);
+	clearContainer();
+	/*container.appendChild(renderForm(s));*/
 }
 
 function renderStudent(student) {
-	const h5 = createElement('h5', 'card-title', undefined, undefined, undefined, `Name: ${student.name}`);
-	const p = createElement('p', 'card-text', undefined, undefined, undefined, `Hi, my name is ${student.name}, I'm a ${student.species} and I'm ${student.age} years old!`);
-	const btn = createElement('button', 'btn btn-primary', undefined, () => editStudent(student), undefined, 'Edit me');
-	const body = createElement('div', 'card-body', undefined, undefined, [h5, p, btn])
-	const img = createElement('img', 'card-img-top', undefined, undefined, undefined, undefined, student.avatar);
+	const h5 = createElement('h5', { text: `Name: ${student.name}`, class: 'card-title' });
+	const p = createElement('p', { class: 'card-text', text: `Hi, my name is ${student.name}, I'm a ${student.species} and I'm ${student.age} years old!` });
+	const btn = createElement('button', { class: 'btn btn-primary', onclick: () => editStudent(student), text: 'Edit me' });
+	const body = createElement('div', { class: 'card-body', children: [h5, p, btn] })
+	const img = createElement('img', { src: student.avatar, class: 'card-img-top' });
 	console.log(img);
 	console.log(body);
-	const element = createElement('div', 'card', "width: 18rem;", undefined, [img, body]);
+	const element = createElement('div', { class: 'card', style: "width: 18rem;", children: [img, body] });
 	return element;
 }
 
