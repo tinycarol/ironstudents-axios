@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Axios GET, POST, PUT, DELETE</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="#">Axios API full test</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<btn class="nav-link">Home</btn>
+							</li>
+							<li class="nav-item">
+								<btn class="nav-link" onclick="getStudents(event)">Students List</btn>
+							</li>
+							<li class="nav-item">
+								<btn class="nav-link">Create Student</btn>
+							</li>
+						</ul>
+						<div id="spinner" class="spinner-border" role="status"
+							style="display:none; position:absolute; right: 10px;">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div id="toast"></div>
+							<div id="container">
+								<!-- API data will go here -->
+								<div class="jumbotron">
+									<h1 class="display-4">
+										Welcome to the Ironhack People database</h1>
+									<p class="lead">Pick one of the sections up there!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="./index.js"></script>
+</body>
+
+</html>
