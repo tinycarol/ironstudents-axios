@@ -1,0 +1,98 @@
+{
+  "students": [
+    {
+      "name": "Rodrigo",
+      "avatar": "https://i.pinimg.com/originals/83/c2/a2/83c2a265ced18a044717e9f91928b7ff.jpg",
+      "age": "10",
+      "grade": "10",
+      "species": "Toro-Araña",
+      "id": 0
+    },
+    {
+      "name": "Aitor",
+      "avatar": "file:///Users/cx02088/Downloads/avatars/avataaars.png",
+      "age": "14",
+      "grade": "5",
+      "species": "Human",
+      "id": 1
+    },
+    {
+      "name": "Andrea",
+      "avatar": "file:///Users/cx02088/Downloads/avatars/andrea.png",
+      "age": "40",
+      "grade": "10",
+      "species": "Human",
+      "id": 2
+    },
+    {
+      "name": "Nidian",
+      "avatar": "file:///Users/cx02088/Downloads/avatars/nidian.png",
+      "age": "29",
+      "grade": "10",
+      "species": "Human",
+      "id": 3
+    },
+    {
+      "name": "Maria",
+      "avatar": "file:///Users/cx02088/Downloads/avatars/maria.png",
+      "age": "30",
+      "grade": "9",
+      "species": "Human",
+      "id": 4
+    },
+    {
+      "name": "Jaime",
+      "avatar": "file:///Users/cx02088/Downloads/avatars/jaime.png",
+      "age": "44",
+      "grade": "9",
+      "species": "Human",
+      "id": 5
+    },
+    {
+      "name": "Fer",
+      "avatar": "file:///Users/cx02088/Downloads/avatars/fer.png",
+      "age": "42",
+      "grade": "9",
+      "species": "Human",
+      "id": 6
+    },
+    {
+      "name": "Link",
+      "species": "Cat",
+      "age": 3,
+      "grade": 10,
+      "id": 7
+    }
+  ],
+  "tas": [
+    {
+      "name": "Plaso",
+      "age": 10,
+      "bootcamps": 3
+    },
+    {
+      "name": "Moi",
+      "age": 10,
+      "bootcamps": 1
+    },
+    {
+      "name": "Carlos",
+      "age": 10,
+      "bootcamps": 3
+    }
+  ],
+  "lts": [
+    {
+      "name": "Carol",
+      "age": 10,
+      "bootcamps": 2,
+      "company": "Telefonica"
+    },
+    {
+      "name": "Hulio",
+      "age": 10,
+      "bootcamps": 20,
+      "company": "Telefonica"
+    }
+  ]
+}
